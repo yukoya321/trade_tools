@@ -1,6 +1,5 @@
 import json
 import requests
-import urllib.parse
 
 class Pricing(object):
 
@@ -20,7 +19,7 @@ class Pricing(object):
         prices = json.loads(prices_json.text)
         return prices
 
-    def streaming(self, *currencies):
+    def streaming(self, currencies):
         headers={
             "Authorization": self.auth_key
         }
